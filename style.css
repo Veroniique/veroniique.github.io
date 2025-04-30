@@ -99,9 +99,10 @@ header h1 {
     }
 
     .top-right-navbar {
-        flex-direction: column;
-        gap: 5px;
-        margin: 0;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 8px;
+        margin: 10px 0 0 auto;
     }
 
     .container {
