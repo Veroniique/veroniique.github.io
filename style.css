@@ -5,6 +5,13 @@ header {
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 1000;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
 }
 
 .navbar-container {
@@ -47,6 +54,8 @@ header h1 {
     font-size: 4rem;
     font-weight: bold;
     margin-bottom: 15px;
+    /*new addition*/
+    text-align: center;
 }
 
 .profilepic {
@@ -61,6 +70,9 @@ header h1 {
     align-items: center;
     justify-content: center;
     margin-top: 50px;
+    /*these 2 are new additions*/
+    padding: 20px;
+    flex-wrap: wrap;
 }
 
 .text {
@@ -73,4 +85,65 @@ header h1 {
     font-size: 1.2rem;
     line-height: 1.5;
     color: #333;
+}
+
+/*Responsive Design*/
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 20px
+    }
+
+    .navbar-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .top-right-navbar {
+        flex-direction: column;
+        gap: 5px;
+        margin: 0;
+    }
+
+    .container {
+        flex-direction: column;
+        margin-top: 50px;
+        padding: 10px;
+    }
+
+    .text {
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .main-title {
+        font-size: 2.5rem;
+    }
+
+    .main-para {
+        font-size: 1rem;
+    }
+
+    .profilepic {
+        width: 60%;
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 16px;
+    }
+
+    .top-right-navbar button {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    .main-title {
+        font-size: 2rem;
+    }
+
+    .profilepic {
+        width: 80%;
+    }
 }
