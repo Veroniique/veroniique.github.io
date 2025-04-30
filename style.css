@@ -1,3 +1,4 @@
+/* general page layout styling */
 header {
     background-color: black;
     padding: 15px 20px;
@@ -14,6 +15,7 @@ body {
     line-height: 1.6;
 }
 
+/* nav bar styling */
 .navbar-container {
     display: flex;
     justify-content: space-between;
@@ -50,35 +52,25 @@ header h1 {
     background-color: #0056b3;
 }
 
+/*styling for index page paragraph and title*/
+.index-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 60px;
+    padding: 20px;
+}
+
 .main-title {
     font-size: 4rem;
     font-weight: bold;
     margin-bottom: 15px;
-    /*new addition*/
     text-align: center;
-}
-
-.profilepic {
-    width: 30%;
-    height: auto;
-    border-radius: 5%;
-    margin-top: 25px;
-}
-
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 50px;
-    /*these 2 are new additions*/
-    padding: 20px;
-    flex-wrap: wrap;
 }
 
 .text {
     flex: 1;
     margin-right: 20px;
-    text-align: left;
 }
 
 .main-para {
@@ -87,7 +79,16 @@ header h1 {
     color: #333;
 }
 
-/*Responsive Design*/
+/* picture styling*/
+.profilepic {
+    width: 30%;
+    height: auto;
+    border-radius: 5%;
+    margin-left: auto;
+}
+
+/*responsive styling*/
+
 @media (max-width: 768px) {
     header h1 {
         font-size: 20px
@@ -105,9 +106,10 @@ header h1 {
         margin: 10px 0 0 10px;
     }
 
-    .container {
+    .index-container {
         flex-direction: column;
         margin-top: 50px;
+        align-items: center;
         padding: 10px;
     }
 
@@ -119,21 +121,30 @@ header h1 {
     .main-title {
         font-size: 2.5rem;
         margin-top: 30px;
+        text-align: center;
     }
 
     .main-para {
         font-size: 1rem;
+        text-align: center;
     }
 
     .profilepic {
         width: 60%;
         margin-top: 15px;
+        display: block;
     }
 }
 
 @media (max-width: 480px) {
     header h1 {
         font-size: 16px;
+        margin-top: 35px;
+    }
+
+    .index-container {
+        flex-direction: column;
+        align-items: center;
         margin-top: 35px;
     }
 
@@ -152,9 +163,24 @@ header h1 {
     .main-title {
         font-size: 2rem;
         margin-top: 40px;
+        text-align: center;
+    }
+
+    .main-para {
+        font-size: 0.9em;
+        text-align: center;
     }
 
     .profilepic {
         width: 80%;
+        margin: 20px auto;
+        display: block;
+    }
+
+    .text {
+        margin-right: 0;
+        text-align: center;
     }
 }
+
+/*footer styling*/
